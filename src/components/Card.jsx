@@ -20,18 +20,31 @@ Notes:
 */
 
 export default function Card(props) {
+
+    let badgeText 
+    let badgeClass 
+    if (props.exp.openSpots === 0){
+        badgeText = "SOLD OUT"
+        badgeClass = "card--soldOut"
+
+    } else if (props.exp.location === "Online"){
+        badgeText = "ONLINE"
+        badgeClass = "card--online"     
+    }
+
     return (
         <div className="card">
-            <img className="card--image" src={`images/${props.image}`}/>
+            {badgeText && <div className={`card--badge ${badgeClass}`}>{badgeText}</div>}
+            <img className="card--image" src={`images/${props.exp.coverImg}`}/>
             <div className="card--info">
                 <img className="card--star" src="images/star.png"/>
-                <p className="card--rating">{props.rating}</p>
-                <p className="card--reviews gray">({props.reviews})</p>
+                <p className="card--rating">{props.exp.stats.rating}</p>
+                <p className="card--reviews gray">({props.exp.stats.reviewCount})</p>
                 <p className="card--separator gray">•</p>
-                <p className="card--location gray">{props.location}</p>
+                <p className="card--location gray">{props.exp.location}</p>
             </div>
-            <p className="card--text">{props.title}</p>
-            <p className="card--price"><b>From ${props.price}</b> / person</p>            
+            <p className="card--text">{props.exp.title}</p>
+            <p className="card--price"><b>From ${props.exp.price}</b> / person</p>            
         </div>
     )
 }
