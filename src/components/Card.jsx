@@ -28,7 +28,7 @@ export default function Card(props) {
                 <p className="card--rating">{props.rating}</p>
                 <p className="card--reviews gray">({props.reviews})</p>
                 <p className="card--separator gray">•</p>
-                <p className="card--country gray">{props.country}</p>
+                <p className="card--location gray">{props.location}</p>
             </div>
             <p className="card--text">{props.title}</p>
             <p className="card--price"><b>From ${props.price}</b> / person</p>            

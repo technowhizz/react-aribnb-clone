@@ -47,11 +47,19 @@ nav{
 }
 
 
+.cards-list{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 20px;
+}
+
 .card{
     display: flex;
     flex-direction: column;
-    padding-left: 37px;
     max-width: min-content;
+    flex: 0 0 auto;
     font-size: 14px;
 
 }
@@ -63,9 +71,16 @@ nav{
 .card--image{
     max-width: 176px;
     margin-bottom: 0px;
+    border-radius: 9px;
 }
 
+.card--reviews, .card--separator{
+    padding-left:3px;
+}
 
+.card--location{
+    padding-left: 2px;
+}
 
 .card--info{
     margin: 0px;
