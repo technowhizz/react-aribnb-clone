@@ -47,3 +47,37 @@ nav{
 }
 
 
+.card{
+    display: flex;
+    flex-direction: column;
+    padding-left: 37px;
+    max-width: min-content;
+    font-size: 14px;
+
+}
+
+.gray {
+    color: #918E9B;
+}
+
+.card--image{
+    max-width: 176px;
+    margin-bottom: 0px;
+}
+
+
+
+.card--info{
+    margin: 0px;
+    display: flex;
+    align-items: center;
+}
+
+.card > p, .card--info > p{
+    margin: 0;
+}
+
+.card--star{
+    max-width: 14px;
+    max-height: 14px;
+}
