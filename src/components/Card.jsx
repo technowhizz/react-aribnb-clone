@@ -21,8 +21,9 @@ Notes:
 
 export default function Card(props) {
 
-    let badgeText 
-    let badgeClass 
+    let badgeText
+    let badgeClass
+
     if (props.exp.openSpots === 0){
         badgeText = "SOLD OUT"
         badgeClass = "card--soldOut"
