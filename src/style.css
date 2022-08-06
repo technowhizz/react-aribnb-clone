@@ -29,8 +29,18 @@ nav{
 }
 
 .hero--image{
-   max-width: 400px;
-   align-self: center;
+    padding-top: 10px;
+    max-width: 584px;
+    align-self: center;
+    min-width: 300px;
+}
+
+@media (max-width: 779px) {
+    .hero--image{
+        max-width: 75%;
+
+    }
+
 }
 
 .hero--title{
@@ -52,7 +62,8 @@ nav{
     flex-wrap: nowrap;
     gap: 20px;
     overflow-x: auto;
-    padding: 20px;
+    padding-left: 36px;
+    padding-top: 10px;
 }
 
 .card{
